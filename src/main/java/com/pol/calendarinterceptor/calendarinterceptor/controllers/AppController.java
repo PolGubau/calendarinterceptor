@@ -15,7 +15,6 @@ public class AppController {
     @GetMapping("/")
     public ResponseEntity<?> foo(HttpServletRequest request) {
         Map<String, Object> data = new HashMap<String, Object>();
-        data.put("message", "Hello, World!");
         data.put("timestamp", System.currentTimeMillis());
         data.put("message", request.getAttribute("message"));
         return ResponseEntity.ok(data);
